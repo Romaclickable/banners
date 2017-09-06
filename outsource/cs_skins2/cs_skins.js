@@ -430,7 +430,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,132.8,44.2);
 	this.instance.parent = this;
 	this.instance.setTransform(66.5,21.5,1,1,0,0,0,66.5,21.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:20.6},11,cjs.Ease.get(-1)).to({y:19.5},13,cjs.Ease.get(1)).to({y:20.5},12,cjs.Ease.get(-1)).to({y:21.5},13,cjs.Ease.get(1)).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:18.1},14,cjs.Ease.get(-1)).to({y:14.5},15,cjs.Ease.get(1)).wait(1).to({y:17.9},14,cjs.Ease.get(-1)).to({y:21.5},15,cjs.Ease.get(1)).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-76.6,-25.9,209.6,93);
@@ -442,6 +442,7 @@ p.nominalBounds = new cjs.Rectangle(-76.6,-25.9,209.6,93);
 	// Слой 1
 	this.instance = new lib.logo_big();
 	this.instance.parent = this;
+	this.instance.setTransform(4,2);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -564,14 +565,14 @@ p.nominalBounds = new cjs.Rectangle(41,-23,249,227);
 	// text
 	this.instance_1 = new lib.Символ22();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(84,115.5,1,1,0,0,0,73,18.5);
+	this.instance_1.setTransform(85,118.5,1,1,0,0,0,73,18.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
 
 	// logo
 	this.instance_2 = new lib.Символ14();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(64.5,27,1,1,0,0,0,56.5,22);
+	this.instance_2.setTransform(68.5,31.1,1.138,1.138,0,0,0,56.5,22);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
@@ -604,7 +605,7 @@ p.nominalBounds = new cjs.Rectangle(41,-23,249,227);
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(133.2,107.4,1143.8,283.7);
+p.nominalBounds = new cjs.Rectangle(129.3,105.9,1147.7,285.2);
 // library properties:
 lib.properties = {
 	width: 300,
@@ -613,20 +614,20 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/ak.png?1504702760457", id:"ak"},
-		{src:"images/atfingertips.png?1504702760457", id:"atfingertips"},
-		{src:"images/bg.jpg?1504702760457", id:"bg"},
-		{src:"images/btn1.jpg?1504702760457", id:"btn1"},
-		{src:"images/btn2.jpg?1504702760457", id:"btn2"},
-		{src:"images/CS_GOSkins.png?1504702760457", id:"CS_GOSkins"},
-		{src:"images/Fog.png?1504702760457", id:"Fog"},
-		{src:"images/golova.png?1504702760457", id:"golova"},
-		{src:"images/Group.png?1504702760457", id:"Group"},
-		{src:"images/kamni.png?1504702760457", id:"kamni"},
-		{src:"images/logo_big.png?1504702760457", id:"logo_big"},
-		{src:"images/plecho.png?1504702760457", id:"plecho"},
-		{src:"images/ruka.png?1504702760457", id:"ruka"},
-		{src:"images/telo.png?1504702760457", id:"telo"}
+		{src:"images/ak.png?1504704342247", id:"ak"},
+		{src:"images/atfingertips.png?1504704342247", id:"atfingertips"},
+		{src:"images/bg.jpg?1504704342247", id:"bg"},
+		{src:"images/btn1.jpg?1504704342247", id:"btn1"},
+		{src:"images/btn2.jpg?1504704342247", id:"btn2"},
+		{src:"images/CS_GOSkins.png?1504704342247", id:"CS_GOSkins"},
+		{src:"images/Fog.png?1504704342247", id:"Fog"},
+		{src:"images/golova.png?1504704342247", id:"golova"},
+		{src:"images/Group.png?1504704342247", id:"Group"},
+		{src:"images/kamni.png?1504704342247", id:"kamni"},
+		{src:"images/logo_big.png?1504704342247", id:"logo_big"},
+		{src:"images/plecho.png?1504704342247", id:"plecho"},
+		{src:"images/ruka.png?1504704342247", id:"ruka"},
+		{src:"images/telo.png?1504704342247", id:"telo"}
 	],
 	preloads: []
 };
