@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    
+    <!---------------------- Head ---------------------->
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width">
+        
+        <script src="data/case-data.js"></script>       <!-------    <= case data holder        -->
+        
+        <style>
+            
+            /* ----- <div class="case-anim-item" ... - case container styles ----- */
+            
+            .case-anim-item {
+                display: inline-block;
+                width : 350px;
+                height: 280px;
+                
+                box-sizing: border-box;
+                border: solid 1px rgb(157, 157, 157);
+                margin: 20px;
+                
+                background-size: 40% 40%;
+            }
+        </style>
+        
+    </head>
+    
+    <!---------------------- /Head ---------------------->
+    
+    <!---------------------- Body ---------------------->
+    
+    <body style="margin: 0; text-align: center;">
+        <div class="animated-cases">
+            
+            <!-- [data-case=...] - object width case preferences from case data holder -->
+            
+            <div class="case-anim-item" data-case="case-0001"></div>
+            <div class="case-anim-item" data-case="case-0002"></div>
+            <div class="case-anim-item" data-case="case-0003"></div>
+            <div class="case-anim-item" data-case="case-0004"></div>
+            <div class="case-anim-item" data-case="case-0005"></div>
+            
+        </div>
+        
+        <script src="js/case_builder.js"></script>      <!-------    <= case builder engine     -->
+        
+    </body>
+    
+    <!---------------------- /Body ---------------------->
+</html>
