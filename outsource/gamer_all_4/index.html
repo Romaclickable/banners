@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width">
+        
+        <!----- Add data storage and engine ----->
+        
+        <script src="assets/case-data.js"></script>               <!--        Case Data from [data-case-src]         -->
+        <script src="assets/default-case-images.js"></script>     <!--   Default Case Images from [data-case-type]   -->
+        <script src="assets/case-builder.js"></script>            <!--             Case Builder Engine               -->
+        
+        <style>
+            
+            .case-anim-item {
+                width : 240px;
+                height: 192px;
+                
+                /* ----- Edit This -----> */
+                
+                display: inline-block;
+                box-sizing: border-box;
+                border: solid 1px rgb(157, 157, 157);
+                margin: 10px;
+                
+                /* <----- Edit This ----- */
+            }
+            
+        </style>
+        
+    </head>
+    <body style="margin: 0;">
+        <div class="animated-cases">
+            
+            <div class="case-anim-item" data-case-type="brown-case" data-case-src="OSRS-classic-0.99"></div>
+            <div class="case-anim-item" data-case-type="brown-case" data-case-src="OSRS-dragon-3.99"></div>
+            <div class="case-anim-item" data-case-type="brown-case" data-case-src="RS3-fortune-0.99"></div>
+            <div class="case-anim-item" data-case-type="brown-case" data-case-src="RS3-lucky-0.99"></div>
+            
+        </div>
+        
+        <script>
+            
+            /* ----- Run case builder ----- */
+            
+            window.onload = function(){
+                AnimCasesSetUp().Run('brown-case', brown_case_default_images, animated_case_data_holder);
+            }
+        </script>
+    </body>
+</html>
