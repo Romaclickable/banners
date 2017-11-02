@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <meta name="viewport" content="width=device-width">
+        
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script src="assets/data/data.js"></script>
+        
+        <script>
+            var params = {
+                gutter: 10
+            }
+        </script>
+        
+        <style>
+            @font-face {
+                font-family: Font;
+                font-style : normal;
+                src: url(assets/font/font.otf);
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            #box {
+                position: absolute;
+                top: 0; left: 0;
+                background-color: black;
+                
+                -webkit-touch-callout:none;
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                -ms-user-select:none;
+                -o-user-select:none;
+                user-select:none;
+                
+                -webkit-text-size-adjust:100%;
+                -moz-text-size-adjust:100%;
+                -ms-text-size-adjust:100%;
+                -o-text-size-adjust:100%;
+                text-size-adjust:100%;
+                
+                transition: 400ms;
+                -webkit-transition: 400ms;
+                -moz-transition: 400ms;
+                -ms-transition: 400ms;
+                -o-transition: 400ms;
+            }
+            #content, #bg, #button > div, #animation, canvas{
+                position: absolute;
+                width: 100%; height: 100%;
+                top: 0; left: 0;
+            }
+            
+            .bottom-section {
+                position: absolute;
+                width: 136px; height: 34px;
+                bottom : 20px;
+            }
+            
+            #discript {
+                left: 30px;
+                z-index: 5;
+            }
+            
+            #discript > span {
+                font-family: 'Font', sans-serif;
+                font-size: 13px;
+                color: rgb(0,197,201);
+                line-height: 34px;
+                text-transform: uppercase;
+                text-decoration: none; 
+            }
+            
+            #button {
+                right: 20px;
+                text-align: center;
+                border-radius : 17px;
+                text-align: center;
+                cursor: pointer;
+                background-color: rgb(0,197,201);
+                z-index: 5;
+                
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                
+                transition: 300ms;
+                -webkit-transition: 300ms;
+                -moz-transition: 300ms;
+                -ms-transition: 300ms;
+                -o-transition: 300ms;
+            }
+            
+            #button > span {
+                font-family: 'Font', sans-serif;
+                font-size: 13px;
+                color: rgb(255,255,255);
+                line-height: 34px;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            
+            
+            #button:hover {
+                opacity: 1;
+                background-color: rgb(239,171,22);
+                
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                -o-transform: scale(1.1);
+            }
+            
+            #logo {
+                position: absolute;
+                width: 50px; height: 58px;
+                top: 20px; left: 20px;
+                z-index: 4;
+                
+                background: url(assets/img/logo.svg) center no-repeat;
+                background-size: cover;
+            }
+            
+            #bonus-txt {
+                position: absolute;
+                display: table;
+                width : 190px; height: 58px;
+                top: 20px; right: 20px;
+                text-align: center;
+                z-index: 4;
+            }
+            
+            #bonus-txt > div {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            
+            .b-txt {
+                display: block;
+                font-family: 'Font', sans-serif;
+                font-size: 10px;
+                color: rgb(255,255,255);
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            
+            .timer-count {
+                display: inline;
+                font-family: 'Font', sans-serif;
+                font-size: 16px;
+                color: rgb(255,255,255);
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            
+            canvas {
+                z-index: 3;
+            }
+            
+            /* -------------------------------------------------- FRAME -------------------------------------------------- */
+            
+            #frame {
+                position: absolute;
+                z-index: 2;
+            }
+            #frame > div {
+                position: absolute;
+                
+                transition: 500ms ease;
+                -webkit-transition: 500ms ease;
+                -moz-transition: 500ms ease;
+                -ms-transition: 500ms ease;
+                -o-transition: 500ms ease;
+            }
+            
+            .y-side {
+                width : 2px;
+            }
+            .x-side {
+                height: 2px;
+            }
+            
+            .l-frame, .b-frame {
+                bottom: 0; left: 0;
+            }
+            .r-frame, .t-frame {
+                top: 0; right: 0;
+            }
+            
+            .hide-y {
+                height: 0;
+            }
+            
+            .show-y {
+                height: 80%;
+            }
+            
+            .hide-x {
+                width: 0;
+            }
+            
+            .show-x {
+                width: 80%;
+            }
+            
+            .l-frame {
+                background-image: linear-gradient(to top, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -webkit-linear-gradient(bottom, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -moz-linear-gradient(bottom, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -ms-linear-gradient(bottom, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -o-linear-gradient(bottom, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+            }
+            .r-frame {
+                background-image: linear-gradient(to bottom, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -webkit-linear-gradient(top, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -moz-linear-gradient(top, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -ms-linear-gradient(top, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -o-linear-gradient(top, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+            }
+            .t-frame {
+                background-image: linear-gradient(to left, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -webkit-linear-gradient(right, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -moz-linear-gradient(right, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -ms-linear-gradient(right, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -o-linear-gradient(right, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+            }
+            .b-frame {
+                background-image: linear-gradient(to right, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -webkit-linear-gradient(left, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -moz-linear-gradient(left, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -ms-linear-gradient(left, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+                background-image: -o-linear-gradient(left, rgba(0,197,201,1) 0%, rgba(0,197,201,0) 100%);
+            }
+            
+            /* -------------------------------------------------- FRAME -------------------------------------------------- */
+            
+            #bg {
+                z-index: 1;
+                overflow: hidden;
+            }
+            
+            #image {
+                position: absolute;
+                width: 100%; height: 100%;
+                top: 0; left: 0;
+                background: url(assets/img/bg.jpg) center no-repeat;
+                background-size: cover;
+            }
+            
+            .hide {
+                opacity: 0;
+            }
+            
+            .show {
+                opacity: 1;
+            }
+        </style>
+        <script src="assets/js/animation.js"></script>
+    </head>
+    <body>
+        <div id="box" class="hide">
+            <div id="content">
+                
+                <div class="bottom-section" id="button">
+                    <span>GET HKN NOW</span>
+                </div>
+                
+                <div class="bottom-section" id="discript">
+                    <span>HACKEN.IO</span>
+                </div>
+                
+                <div id="logo"></div>
+                <div id="bonus-txt">
+                    <div></div>
+                </div>
+                
+                <div id="animation">
+                    <canvas></canvas>
+                </div>
+                
+                <div id="frame">
+                    <div data-vector="y" class="y-side l-frame hide-y"></div>
+                    <div data-vector="y" class="y-side r-frame hide-y"></div>
+                    <div data-vector="x" class="x-side t-frame hide-x"></div>
+                    <div data-vector="x" class="x-side b-frame hide-x"></div>
+                </div>
+                
+                <div id="bg">
+                    <div id="image"></div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+    <script src="assets/js/index.js"></script>
+</html>
