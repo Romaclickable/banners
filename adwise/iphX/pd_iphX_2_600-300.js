@@ -154,14 +154,14 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 (lib.Symbol35 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
-	// Слой 2
-	this.instance = new lib.iphone_front();
+	// Слой 3
+	this.instance = new lib.BackBlackMatt();
 	this.instance.parent = this;
-	this.instance.setTransform(8.5,23.2,0.425,0.425,-20.4);
+	this.instance.setTransform(-67.3,-44.3,0.887,0.887,-11);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Symbol35, new cjs.Rectangle(8.5,-26.1,231.4,314.7), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol35, new cjs.Rectangle(-67.3,-93.2,324.4,423.4), null);
 
 
 (lib.Symbol34 = function(mode,startPosition,loop) {
@@ -179,14 +179,14 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 (lib.Symbol33 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
-	// Слой 2
-	this.instance = new lib.BackBlackMatt();
+	// Слой 3
+	this.instance = new lib.iphone_front();
 	this.instance.parent = this;
-	this.instance.setTransform(16,13,0.761,0.761);
+	this.instance.setTransform(38.5,39.4,0.44,0.44,-10.4);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Symbol33, new cjs.Rectangle(16,13,219.9,327.2), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol33, new cjs.Rectangle(38.5,12.8,197.3,315.1), null);
 
 
 (lib.Symbol29 = function(mode,startPosition,loop) {
@@ -689,20 +689,20 @@ p.nominalBounds = new cjs.Rectangle(39.8,-293,4,132.5);
 	// phone1.png
 	this.instance = new lib.Symbol33();
 	this.instance.parent = this;
-	this.instance.setTransform(128.4,434.4,1,1,-41.4,0,0,128.9,136.6);
+	this.instance.setTransform(150.5,454.1,1,1,-41.4,0,0,128.9,136.6);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({regX:129,regY:136.5,rotation:0,x:271,y:126.5},24).to({y:140.3},30).to({y:126.5},30).to({y:140.3},30).to({y:112.7},30).to({regY:136.4,rotation:35.2,x:513.8,y:500.7},20).to({_off:true},1).wait(185));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({regX:129,regY:136.5,rotation:0,x:293.1,y:126.5},24).to({y:140.3},30).to({y:126.5},30).to({y:140.3},30).to({y:112.7},30).to({regY:136.4,rotation:35.2,x:535.9,y:500.7},20).to({_off:true},1).wait(185));
 
 	// 10one.png
 	this.instance_1 = new lib.Symbol35();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(75.1,464.1,1,1,-30,0,0,138,119);
+	this.instance_1.setTransform(88.1,464.1,1,1,-30,0,0,138,119);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(7).to({_off:false},0).to({rotation:0,x:236,y:151},24).to({y:164.8},30).to({y:151},30).to({y:164.8},30).to({y:137.2},30).to({rotation:35.2,x:548.8,y:504.5},20).wait(179));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(7).to({_off:false},0).to({rotation:0,x:258.1,y:151},24).to({y:164.8},30).to({y:151},30).to({y:164.8},30).to({y:137.2},30).to({rotation:35.2,x:570.9,y:504.5},20).wait(179));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-38.1,270.9,381.4,390.9);
+p.nominalBounds = new cjs.Rectangle(0.7,290.6,356.5,366.7);
 
 
 (lib.Symbol2_1 = function(mode,startPosition,loop) {
@@ -1439,25 +1439,25 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/BackBlackMatt.png?1509701566123", id:"BackBlackMatt"},
-		{src:"images/Bitmap1.png?1509701566123", id:"Bitmap1"},
-		{src:"images/buty.png?1509701566123", id:"buty"},
-		{src:"images/con1.png?1509701566123", id:"con1"},
-		{src:"images/con2.png?1509701566123", id:"con2"},
-		{src:"images/con3.png?1509701566123", id:"con3"},
-		{src:"images/fullho.png?1509701566123", id:"fullho"},
-		{src:"images/gather.png?1509701566123", id:"gather"},
-		{src:"images/iphone_front.png?1509701566123", id:"iphone_front"},
-		{src:"images/kare.png?1509701566123", id:"kare"},
-		{src:"images/orrr.png?1509701566123", id:"orrr"},
-		{src:"images/PD_logo.png?1509701566123", id:"PD_logo"},
-		{src:"images/que1.png?1509701566123", id:"que1"},
-		{src:"images/que2.png?1509701566123", id:"que2"},
-		{src:"images/ten1.png?1509701566123", id:"ten1"},
-		{src:"images/ten2.png?1509701566123", id:"ten2"},
-		{src:"images/ten3.png?1509701566123", id:"ten3"},
-		{src:"images/ten4.png?1509701566123", id:"ten4"},
-		{src:"images/Растровоеизображение1.png?1509701566123", id:"Растровоеизображение1"}
+		{src:"images/BackBlackMatt.png?1509702564827", id:"BackBlackMatt"},
+		{src:"images/Bitmap1.png?1509702564827", id:"Bitmap1"},
+		{src:"images/buty.png?1509702564827", id:"buty"},
+		{src:"images/con1.png?1509702564827", id:"con1"},
+		{src:"images/con2.png?1509702564827", id:"con2"},
+		{src:"images/con3.png?1509702564827", id:"con3"},
+		{src:"images/fullho.png?1509702564827", id:"fullho"},
+		{src:"images/gather.png?1509702564827", id:"gather"},
+		{src:"images/iphone_front.png?1509702564827", id:"iphone_front"},
+		{src:"images/kare.png?1509702564827", id:"kare"},
+		{src:"images/orrr.png?1509702564827", id:"orrr"},
+		{src:"images/PD_logo.png?1509702564827", id:"PD_logo"},
+		{src:"images/que1.png?1509702564828", id:"que1"},
+		{src:"images/que2.png?1509702564828", id:"que2"},
+		{src:"images/ten1.png?1509702564828", id:"ten1"},
+		{src:"images/ten2.png?1509702564828", id:"ten2"},
+		{src:"images/ten3.png?1509702564828", id:"ten3"},
+		{src:"images/ten4.png?1509702564828", id:"ten4"},
+		{src:"images/Растровоеизображение1.png?1509702564828", id:"Растровоеизображение1"}
 	],
 	preloads: []
 };
