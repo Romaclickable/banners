@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <script>
+            window.WindowSize = function() {
+                return {
+                    width: Math.min(document.documentElement.clientWidth, window.innerWidth || 0),
+                    height: Math.min(document.documentElement.clientHeight, window.innerHeight || 0)
+                }
+            };
+            
+            window.images = {};
+            var IMGS = [
+     {src:"images/bgjpg.jpg", id:"bgjpg"},
+        {src:"images/dacyuk.png", id:"dacyuk"},
+        {src:"images/gift1.png", id:"gift1"},
+        {src:"images/gift2.png", id:"gift2"},
+        {src:"images/kryshka.png", id:"kryshka"},
+        {src:"images/lave.png", id:"lave"},
+        {src:"images/logo2.png", id:"logo2"},
+        {src:"images/samedov.png", id:"samedov"},
+        {src:"images/smolov.png", id:"smolov"}
+            ];
+            for(var i = 0; i < IMGS.length; i++){
+                var img = new Image();
+                img.src = IMGS[i].src;
+                images[IMGS[i].id] = img;
+            }
+        </script>
+        <style id="DO_NOT_EDIT">
+            #main_wrapper,
+            #content_box,
+            #wrapper_background {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0
+            }
+            #content_box,
+            #main_wrapper {
+                overflow: hidden;
+            }
+            #canvas {
+                position: absolute;
+                left: 0;
+                top: 0
+            }
+            .content_box{
+                background-color: rgba(255,255,255,1);
+            }
+            
+            .canvas{
+               z-index: 1;
+            }
+            
+        </style>
+        
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        
+        <script src="index.js"></script>
+    </head>
+    <body style="margin:0px;">
+        <div id="main_wrapper">
+            <div id="content_box" class="content_box hide_box">
+                <canvas id="canvas" class="canvas"></canvas>
+            </div>
+        </div>
+    </body>
+    <script>
+        var c = document.querySelector('#canvas'), cb = document.querySelector('#content_box'), _RS;
+        stage = new createjs.Stage(c);
+        stage.addChild(new lib.index());
+        p = window.devicePixelRatio;
+        stage.scaleX = stage.scaleY = p;
+        
+        (_RS = function(){			
+            var stage_s = WindowSize(), w = stage_s.width, h = 250;
+            c.width = w * p; c.height = h * p;
+            c.style.width =  w + 'px'; c.style.height = h + 'px';
+        })();
+        window.addEventListener('resize', _RS);	
+        
+        createjs.Ticker.setFPS(30);
+        createjs.Ticker.addEventListener("tick", stage);
+    </script>
+</html>
